@@ -1,0 +1,33 @@
+---
+declared-services:
+  Watson Assistant-c2:
+    label: assistant
+    plan: free
+  Text to Speech-z1:
+    label: text_to_speech
+    plan: lite
+  Speech to Text-9b:
+    label: speech_to_text
+    plan: lite
+  Language Translator-cm:
+    label: language_translator
+    plan: lite
+
+applications:
+- path: .
+  memory: 128M
+  instances: 1
+  name: wa-biz-support
+  command: python welcome.py
+  disk_quota: 512M
+  buildpack: https://github.com/cloudfoundry/python-buildpack.git
+  random-route: true
+  services:
+  - Language Translator-cm
+  - Speech to Text-9b
+  - Text to Speech-z1
+  - Watson Assistant-c2
+  
+env:
+  WORKSPACE_ID: 67cf2833-f5bc-4db0-946a-85e36f6592c8
+  ASSISTANT_IAM_APIKEY: hOqxSzK4JoUQT2B4UP7JEHfbWAzmFgqQsGM1Y3mT8PuB
