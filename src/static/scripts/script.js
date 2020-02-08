@@ -138,8 +138,6 @@ function displayMsgDiv(contextType, content, type, who, discoverySend = "noSend"
   });
 }
 
-
-
 $(document).ready(function () {
   // $('#q').attr('disabled', 'disabled');
   // $("#includedContent").load("./dashbord.html");
@@ -161,9 +159,8 @@ $(document).ready(function () {
         displayMsgDiv(conversationContext.type, res.results.reponseContent, res.results.responseType, 'bot');
 
       }
-      play(audioText);
+//      play(audioText);
       audioText = '';
-      // play(res.results.reponseContent);
     })
     .fail(function (jqXHR, e) {
       console.log('Error: ' + jqXHR.responseText);
@@ -204,8 +201,7 @@ function sendMessage(message) {
       displayMsgDiv(conversationContext.type, res.results.reponseContent, res.results.responseType, 'bot');
 
     }
-    // play(res.results.reponseContent);
-    play(audioText);
+//    play(audioText);
     audioText = '';
     if (res.results.sendToDiscovery === 'send') {
       discoverySend = res.results.sendToDiscovery;
@@ -238,9 +234,8 @@ function callConversation(res) {
     })
     .done(function (res, status) {
       conversationContext = res.results.context;
-      // play(res.results.responseText);
       displayMsgDiv(conversationContext.type, res.results.reponseContent, res.results.responseType, 'bot', null, null);
-      play(audioText);
+//      play(audioText);
       audioText = '';
     })
     .fail(function (jqXHR, e) {
