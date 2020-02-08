@@ -1,9 +1,9 @@
 #-*- coding: utf-8 -*-
 '''
-ibm_dist.view.login -- watson assistant biz support
+src.view.login -- watson assistant with discovery
 
-@author:     IBM
-@copyright:  2019 IBM distribution. All rights reserved.
+@author: 
+@copyright:  
 @version: 1.0
 
 Created on 2019/06/26
@@ -11,7 +11,7 @@ Created on 2019/06/26
 
 from flask import Blueprint, redirect, request, url_for, render_template, make_response, jsonify
 from flask_login import login_user, logout_user, login_required
-from ibm_dist.utils.user_authorization import User, do_auth
+from src.utils.user_authorization import User, do_auth
 from flask_api import status
 
 url = Blueprint('login', __name__)

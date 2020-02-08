@@ -1,16 +1,16 @@
 #-*- coding: utf-8 -*-
 '''
-ibm_dist.utils.api_utils -- watson assistant biz support
+src.utils.api_utils -- watson assistant with discovery
 
-@author:     IBM
-@copyright:  2019 IBM distribution. All rights reserved.
+@author: 
+@copyright:  
 @version: 1.0
 
 Created on 2019/06/26
 '''
 
 from ibm_watson import LanguageTranslatorV3
-from ibm_dist import tranlatorUser, tranlatorPassword, tranlatorIAMKey, tranlatorUrl
+from src import tranlatorUser, tranlatorPassword, tranlatorIAMKey, tranlatorUrl
 
 def getTranslatorText(convText):
     global language_identify

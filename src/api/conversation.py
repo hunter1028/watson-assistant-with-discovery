@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 '''
-ibm_dist.api.conversation -- watson assistant biz support
+src.api.conversation -- watson assistant with discovery
 
-@author:     IBM
-@copyright:  2019 IBM distribution. All rights reserved.
+@author: 
+@copyright:  
 @version: 1.0
 
 Created on 2019/06/26
@@ -12,8 +12,8 @@ Created on 2019/06/26
 import json
 from flask import jsonify
 from flask import Blueprint, request
-from ibm_dist import assistantUsername, assistantPassword, assistantIAMKey, assistantUrl, workspace_id, language_identify
-from ibm_dist.utils.api_utils import getTranslatorText, getTranslatorToEnlish
+from src import assistantUsername, assistantPassword, assistantIAMKey, assistantUrl, workspace_id, language_identify
+from src.utils.api_utils import getTranslatorText, getTranslatorToEnlish
 from ibm_watson import AssistantV1
 
 url = Blueprint('conversation', __name__)

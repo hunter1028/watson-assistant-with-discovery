@@ -1,9 +1,9 @@
 #-*- coding: utf-8 -*-
 '''
-ibm_dist.api.downloadFile -- watson assistant biz support
+src.api.downloadFile -- watson assistant with discovery
 
-@author:     IBM
-@copyright:  2019 IBM distribution. All rights reserved.
+@author: 
+@copyright:  
 @version: 1.0
 
 Created on 2019/06/26
@@ -11,7 +11,7 @@ Created on 2019/06/26
 
 from flask import request, make_response
 from flask import Blueprint
-from ibm_dist import cos
+from src import cos
 
 url = Blueprint('downloadFile', __name__)
 

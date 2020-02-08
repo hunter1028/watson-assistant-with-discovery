@@ -1,26 +1,26 @@
 #-*- coding: utf-8 -*-
 '''
-welcome -- watson assistant biz support
+welcome -- watson assistant with discovery
 
-@author:     IBM
-@copyright:  2019 IBM distribution. All rights reserved.
+@author: 
+@copyright:  
 @version: 1.0
 
 Created on 2019/06/26
 '''
 # ======= APP ======= 
-from ibm_dist import app
+from src import app
 from flask_cors import CORS
 CORS(app)
 
 # ======= login ======= 
-from ibm_dist import login_manager
+from src import login_manager
 login_manager.init_app(app=app)
-from ibm_dist.view import login
+from src.view import login
 app.register_blueprint(login.url)
 
 # ======= API ======= 
-from ibm_dist.api import conversation, speechFromText, textFromSpeech, discoveryChart, downloadFile
+from src.api import conversation, speechFromText, textFromSpeech, discoveryChart, downloadFile
 app.register_blueprint(conversation.url)
 app.register_blueprint(speechFromText.url)
 app.register_blueprint(textFromSpeech.url)

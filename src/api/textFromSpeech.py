@@ -1,9 +1,9 @@
 #-*- coding: utf-8 -*-
 '''
-ibm_dist.api.textFromSpeech -- watson assistant biz support
+src.api.textFromSpeech -- watson assistant with discovery
 
-@author:     IBM
-@copyright:  2019 IBM distribution. All rights reserved.
+@author: 
+@copyright:  
 @version: 1.0
 
 Created on 2019/06/26
@@ -11,7 +11,7 @@ Created on 2019/06/26
 
 from flask import Response
 from flask import Blueprint, request
-from ibm_dist import speechToTextUser, speechToTextPassword, speechToTextIAMKey, speechToTextUrl
+from src import speechToTextUser, speechToTextPassword, speechToTextIAMKey, speechToTextUrl
 from ibm_watson import SpeechToTextV1
  
 url = Blueprint('speechTotext', __name__)

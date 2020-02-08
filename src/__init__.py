@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 '''
-ibm_dist -- watson assistant biz support
+src -- watson assistant with discovery
 
-@author:     IBM
-@copyright:  2019 IBM distribution. All rights reserved.
+@author: 
+@copyright:  
 @version: 1.0
 
 Created on 2019/06/26
@@ -13,7 +13,7 @@ import ibm_boto3
 from dotenv import load_dotenv
 import os
 import json
-from ibm_dist.utils.user_authorization import User
+from src.utils.user_authorization import User
 from flask_login import LoginManager, current_user
 from flask import Flask
 app = Flask(__name__)

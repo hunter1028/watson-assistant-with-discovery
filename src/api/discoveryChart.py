@@ -1,9 +1,9 @@
 #-*- coding: utf-8 -*-
 '''
-ibm_dist.api.discoveryChart -- watson assistant biz support
+src.api.discoveryChart -- watson assistant with discovery
 
-@author:     IBM
-@copyright:  2019 IBM distribution. All rights reserved.
+@author: 
+@copyright:  
 @version: 1.0
 
 Created on 2019/06/26
@@ -11,7 +11,7 @@ Created on 2019/06/26
 
 from flask import json, jsonify
 from flask import Blueprint
-from ibm_dist import discovery_version, discovery_iam_apikey, discovery_url,discovery_collection_id,discovery_environment_id
+from src import discovery_version, discovery_iam_apikey, discovery_url,discovery_collection_id,discovery_environment_id
 from ibm_watson import DiscoveryV1
 
 url = Blueprint('discoveryChart', __name__)
